@@ -1,0 +1,26 @@
+{
+  "name": "resturantpage",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Odin project- Resturant where we'll render a resturant homepage.DOM manipulation ",
+  "repository": {
+    "type": "git",
+    "url": "resturantPage"
+  },
+  "license": "ISC",
+  "author": "erudite-colloab",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack",
+    "test": "/\\.css$/i"
+  },
+  "devDependencies": {
+    "css-loader": "^7.1.4",
+    "html-webpack-plugin": "^5.6.6",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.105.4",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.3"
+  }
+}
