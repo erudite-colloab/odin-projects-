@@ -1,0 +1,365 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2193b0,
+            #6dd5ed
+        );
+
+    transition:
+        background 0.5s ease;
+}
+
+
+body.sunny {
+    background:
+        linear-gradient(
+            135deg,
+            #f6d365,
+            #fda085
+        );
+}
+
+
+body.cloudy {
+    background:
+        linear-gradient(
+            135deg,
+            #757f9a,
+            #d7dde8
+        );
+}
+
+
+body.rainy {
+    background:
+        linear-gradient(
+            135deg,
+            #314755,
+            #26a0da
+        );
+}
+
+
+body.snowy {
+    background:
+        linear-gradient(
+            135deg,
+            #83a4d4,
+            #b6fbff
+        );
+}
+
+
+.app {
+    width: min(1100px, 90%);
+
+    margin: auto;
+
+    padding: 40px 0;
+}
+
+
+.header {
+    text-align: center;
+
+    margin-bottom: 40px;
+}
+
+
+.header h1 {
+    font-size: 3rem;
+
+    margin-bottom: 25px;
+}
+
+
+.search-box {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+}
+
+
+.search-box input {
+    width: min(400px, 70vw);
+
+    padding: 14px 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 1rem;
+
+    outline: none;
+}
+
+
+.search-box button {
+    padding: 14px 22px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #111827;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.search-box button:hover {
+    background: #374151;
+}
+
+
+.unit-toggle {
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 20px;
+
+    gap: 5px;
+}
+
+
+.unit-toggle button {
+    border: none;
+
+    padding: 8px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.3);
+
+    color: white;
+}
+
+
+.unit-toggle button.active {
+    background: white;
+
+    color: #111827;
+}
+
+
+.current-weather {
+    background:
+        rgba(255,255,255,0.18);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 25px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 30px
+        rgba(0,0,0,0.15);
+}
+
+
+.location h2 {
+    font-size: 2rem;
+
+    margin-bottom: 25px;
+}
+
+
+.temperature {
+    font-size: 6rem;
+
+    font-weight: bold;
+}
+
+
+.condition {
+    font-size: 1.4rem;
+
+    margin-top: 10px;
+}
+
+
+.weather-details {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 50px;
+
+    margin-top: 35px;
+}
+
+
+.detail {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+.detail span {
+    opacity: 0.7;
+}
+
+
+.detail strong {
+    font-size: 1.2rem;
+}
+
+
+.forecast-title {
+    margin: 40px 0 20px;
+
+    font-size: 1.5rem;
+}
+
+
+.forecast {
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    gap: 15px;
+}
+
+
+.forecast-card {
+    background:
+        rgba(255,255,255,0.18);
+
+    backdrop-filter: blur(10px);
+
+    padding: 20px;
+
+    border-radius: 18px;
+
+    text-align: center;
+}
+
+
+.forecast-icon {
+    font-size: 2rem;
+
+    margin: 15px 0;
+}
+
+
+.forecast-card p {
+    margin-top: 10px;
+
+    font-size: 0.9rem;
+
+    opacity: 0.8;
+}
+
+
+.loading {
+    text-align: center;
+
+    font-size: 1.3rem;
+
+    padding: 30px;
+}
+
+
+.error {
+    background: rgba(220, 38, 38, 0.8);
+
+    padding: 15px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    margin-bottom: 20px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+@media (max-width: 700px) {
+
+    .header h1 {
+        font-size: 2.3rem;
+    }
+
+
+    .search-box {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+
+    .search-box input {
+        width: 100%;
+    }
+
+
+    .search-box button {
+        width: 100%;
+    }
+
+
+    .temperature {
+        font-size: 4.5rem;
+    }
+
+
+    .weather-details {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    .forecast {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .forecast {
+        grid-template-columns: 1fr;
+    }
+
+}
